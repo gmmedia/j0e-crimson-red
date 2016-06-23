@@ -2,7 +2,9 @@
 Crimson Red is a child-theme for the Beans framework (http://www.getbeans.io/).  
 Version 1.0  
 
-# Chrimson Red WordPress Theme
+# [Chrimson Red WordPress Theme](https://j0e.org/themes/crimson-red/)
+[Absolute README link](https://github.com/username/repo/blob/branch/docs/more_words.md)
+
 ![Chrimson Red WordPress Theme](screenshot.png "Chrimson Red WordPress Theme")
 
 
