@@ -1,4 +1,4 @@
-# j0e-crimson-red
+# j0e-crimson-red ![Chrimson Red Logo](assets/images/logo.png "Chrimson Red Logo")
 Crimson Red is a child-theme for the Beans framework (http://www.getbeans.io/).  
 Version 1.0  
 
@@ -49,5 +49,5 @@ Big: 705 x 0
 ## External links (with target="_blank") get a (Unicode: f08e) icon
 
 ## Five new editor buttons
-
+![Chrimson Red - Editor buttons](http://themes.j0e.org/crimson-red/wp-content/uploads/sites/2/2016/06/new-editor-butons.png "Chrimson Red - Editor buttons")
 
