@@ -1,0 +1,310 @@
+// Overall width
+@utility-container-large-max-width:				1116px;
+@utility-container-large-padding-horizontal:    35px;
+@block-padding-vertical-large:                  20px;
+
+
+/* Global color
+ ========================================================================== */
+
+/* Header
+ ========================================================================== */
+.tm-header {
+	background: #fff;
+}
+
+.tm-site-branding a {
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	&:active {
+		position: relative;
+		margin-top: -1px;
+	}
+}
+.tm-site-branding a:active {
+	position: relative;
+	bottom: -1px;
+}
+
+/* Search */
+.tm-primary-menu .tm-search {
+	width: 370px;
+}
+.tm-primary-menu .tm-search-toggle {
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+/* Content centered
+ ========================================================================== */
+.tm-centered-content {
+	max-width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* Posts grid
+ ========================================================================== */
+.tm-posts-grid {
+	.tm-article-image {
+		margin: -@panel-box-padding -20px 10px -20px;
+	}
+}
+
+/* Comment form
+ ========================================================================== */
+.form-submit {
+	margin-bottom: 0;
+}
+.tm-comments {
+	background: #FAFAFA;
+	border-radius: @utility-border-rounded;
+	padding: 35px;
+}
+/* Phone landscape and bigger */
+@media (max-width: @breakpoint-small) {
+    .tm-comment-form-wrap {
+		padding: 15px 20px 20px 20px;
+	}
+}
+
+/* Widgets
+ ========================================================================== */
+.tm-widget .tm-count {
+	color: #999;
+	font-size: 12px;
+}
+body > div.tm-site > main > div > div > aside > div.tm-widget.uk-panel {
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+/* tm-bottom
+ ========================================================================== */
+.tm-bottom {
+	background-color: #FAFAFA;
+	border-top: 1px solid #CCC;
+	padding: 50px 0;
+}
+
+/* Footer
+ ========================================================================== */
+.tm-footer {
+	background-color: #3F3F3F;
+	border-top: 1px solid #CCC;
+}
+ul#menu-footer  {
+	margin: 0 0 0px 0;
+}
+ul#menu-footer > li  {
+	margin-top: 0px;
+}
+
+/* 404
+ ========================================================================== */
+.error404 .uk-article {
+	text-align: center;
+	padding-bottom: 80px;
+}
+.error404 .uk-article-title {
+	font-weight: 700;
+	font-size: 270px;
+	line-height: 100%;
+	color: @global-link-color;
+}
+.error404 .tm-article-content h2 {
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 100%;
+}
+.error404 .tm-article-content .uk-form {
+	max-width: 480px;
+}
+
+/* Phone landscape and bigger */
+@media (max-width: @breakpoint-medium) {
+	.error404 .uk-article {
+		padding-bottom: 60px;
+	}
+	.error404 .uk-article-title {
+		font-size: 190px;
+	}
+	.error404 .tm-article-content h2 {
+		font-size: 50px;
+	}
+}
+
+/* Phone landscape and bigger */
+@media (max-width: @breakpoint-small) {
+	.error404 .uk-article {
+		padding-bottom: 30px;
+	}
+	.error404 .uk-article-title {
+		font-size: 130px;
+	}
+	.error404 .tm-article-content h2 {
+		font-size: 40px;
+	}
+}
+
+/* Social bar above the header
+ ========================================================================== */
+.j0e-social-bar {
+	background-color: @global-link-color;
+	height: 22px;
+	padding: 5px 0;
+}
+#menu-social-menue {
+	padding-right: 10px;
+}
+
+/* breadcrumb formatings
+ ========================================================================== */
+.j0e-breadcrumb {
+    padding-top: 15px;
+    background-color: #FCFCFC;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+}
+.j0e-h1-small {
+	font-size: 1rem;
+	line-height: unset;
+}
+
+/* Vertical divider between content and sidebar
+ ========================================================================== */
+// right sidebar
+.tm-main .tm-secondary:before {
+    position: absolute;
+    left: (@global-grid-gutter-large / 2 );
+    top: -20px;
+    bottom: -20px;
+    width: 1px;
+    background-color: #e2e2e2;
+    content: "";
+    z-index: -1;
+}
+@media (max-width: @breakpoint-xlarge) {
+
+    .tm-main .tm-secondary:before {
+		left: (@grid-gutter-horizontal / 2 );
+    }
+
+}
+@media (max-width: @breakpoint-medium) {
+
+    .tm-main .tm-secondary:before {
+		background-color: unset;
+    }
+
+}
+// left sidebar
+.tm-main .uk-push-3-10 ~ .tm-secondary:before {
+	left: unset;
+    right: -(@global-grid-gutter-large / 2 );
+}
+@media (max-width: @breakpoint-xlarge) {
+
+	.tm-main .uk-push-3-10 ~ .tm-secondary:before {
+		left: unset;
+		right: -(@grid-gutter-horizontal / 2 );
+	}
+
+}
+// double left sidebar
+.tm-main .uk-push-5-10 ~ .tm-secondary:before {
+	left: unset;
+    right: -(@global-grid-gutter-large / 2 );
+}
+@media (max-width: @breakpoint-xlarge) {
+
+	.tm-main .uk-push-5-10 ~ .tm-secondary:before {
+		left: unset;
+		right: -(@grid-gutter-horizontal / 2 );
+	}
+
+}
+// No Sidebars
+.tm-main .uk-width-medium-10-10 ~ .tm-secondary:before {
+    background-color: unset;
+}
+
+
+/* Secondary menu under header
+ ========================================================================== */
+.j0e-secondary-menu {
+	background-color: #FFF;
+	border-top: 1px solid #009999;
+}
+
+/* Change Sticky header
+ ========================================================================== */
+.uk-sticky-placeholder > .uk-active {
+	opacity: 0.9;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #009999;
+}
+
+/* Category Widget: indent subcategories
+ ========================================================================== */
+.widget_categories .cat-item ul.children {
+    margin-left: 15px !important;
+    list-style: circle outside;
+}
+
+/* Add icon to external links (marked with target="_blank")
+ ========================================================================== */
+a[target="_blank"]:after {
+	content: "\f08e";
+	font-family: FontAwesome;
+	font-size: 11px;
+	padding-left: 4px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* Remove paddings for the Hero Section
+ ========================================================================== */
+.j0e-hero-section {
+	padding: 0 0px;
+	margin-top: -40px;
+}
+
+/* Hide the gallery caption
+ ========================================================================== */
+.gallery-caption {
+	display: none !important;
+}
+
+/* <pre> and <code>
+ ========================================================================== */
+ pre {
+    border-left: 5px solid @global-link-color;
+ }
+ code {
+	background-color: #F5F5F5;
+ }
+
+/* TOC - Table of Contents
+ ========================================================================== */
+#j0e_toc {
+	.uk-panel-box;
+}
+#j0e_toc span{
+    .uk-panel-title;
+}
+#j0e_toc ul,
+#j0e_toc ol,
+#j0e_toc li {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* WordPress image caption
+ ========================================================================== */
+.wp-caption {
+	margin: 20px 0;
+	border: 1px solid #FAFAFA;
+}

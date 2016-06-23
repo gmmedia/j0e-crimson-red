@@ -1,0 +1,443 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Beans\n"
+"POT-Creation-Date: 2016-04-25 03:39+0200\n"
+"PO-Revision-Date: 2016-04-25 05:01+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: lib/admin/options.php:27
+msgctxt "term meta"
+msgid "Layout"
+msgstr "Layout"
+
+#: lib/admin/options.php:58
+msgctxt "post meta"
+msgid "Layout"
+msgstr "Layout"
+
+#: lib/admin/options.php:65
+msgid "Post Options"
+msgstr "Post Optionen"
+
+#: lib/admin/wp-customize.php:34
+msgid "Logo Image"
+msgstr "Logo Bild"
+
+#: lib/admin/wp-customize.php:40
+msgid "Branding"
+msgstr "Branding"
+
+#: lib/admin/wp-customize.php:51 lib/admin/wp-customize.php:59
+msgid "Default Layout"
+msgstr "Standard Layout"
+
+#: lib/admin/wp-customize.php:66
+msgid "Viewport Width"
+msgstr "Viewport-Breite"
+
+#: lib/admin/wp-customize.php:87
+msgid "Viewport Height"
+msgstr "Viewport Höhe"
+
+#: lib/admin/wp-customize.php:108
+msgid "Preview Tools"
+msgstr "Vorschau Tools"
+
+#: lib/api/admin-menu.php:25
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: lib/api/admin-menu.php:37
+msgid "Beans Settings"
+msgstr "Beans Einstellungen"
+
+#: lib/api/admin-menu.php:37
+msgid "Version "
+msgstr "Version "
+
+#: lib/api/admin-menu.php:56
+msgid "Enable development mode"
+msgstr "Entwicklungsmodus aktivieren"
+
+#: lib/api/admin-menu.php:58
+msgid "This option should be enabled while your website is in development."
+msgstr ""
+"Diese Option sollte aktiviert sein, während die Website in der Entwicklung "
+"ist."
+
+#: lib/api/admin-menu.php:63
+msgid "Mode options"
+msgstr "Modus Optionen"
+
+#: lib/api/compiler/class-options.php:35
+msgid ""
+"Clear CSS and Javascript cached files. New cached versions will be compiled "
+"on page load."
+msgstr ""
+"CSS und Javascript Dateien im Cache löschen. Neu gecachete Versionen werden "
+"beim Laden der Seite erstellt."
+
+#: lib/api/compiler/class-options.php:45
+msgid "Compile all WordPress styles"
+msgstr "Kompiliere alle Wordpress Styles"
+
+#: lib/api/compiler/class-options.php:48
+msgid ""
+"Compile and cache all the CSS files that have been enqueued to the WordPress "
+"head."
+msgstr ""
+"Kompiliere und cache alle CSS-Dateien, die im Wordpress Head mit geladen "
+"werden."
+
+#: lib/api/compiler/class-options.php:58
+msgid "Compile all WordPress scripts"
+msgstr "Kompiliere alle Wordpress Skripte"
+
+#: lib/api/compiler/class-options.php:61
+msgid ""
+"Compile and cache all the Javascript files that have been enqueued to the "
+"WordPress head."
+msgstr ""
+"Kompiliere und cache alle Javascript-Dateien, die im Wordpress Head mit "
+"geladen werden."
+
+#: lib/api/compiler/class-options.php:66
+msgid "Compiler options"
+msgstr "Compiler Optionen"
+
+#: lib/api/compiler/class-options.php:94
+msgid "Cache flushed successfully!"
+msgstr "Cache wurde erfolgreich geleert!"
+
+#: lib/api/compiler/class-options.php:107
+msgid "Flush assets cache"
+msgstr "Assets Cache leeren"
+
+#: lib/api/compiler/class-options.php:118
+msgid "Styles are not compiled in development mode."
+msgstr "Styles werden im Entwicklungsmodus nicht kompiliert."
+
+#: lib/api/compiler/class-options.php:128
+msgid "Scripts are not compiled in development mode."
+msgstr "Skripte werden im Entwicklungsmodus nicht kompiliert."
+
+#: lib/api/fields/types/field.php:61
+msgid "More..."
+msgstr "Mehr..."
+
+#: lib/api/fields/types/image.php:52
+msgid "Add Image"
+msgid_plural "Add Images"
+msgstr[0] "Bild hinzufügen"
+msgstr[1] "Bilder hinzufügen"
+
+#: lib/api/image/class-options.php:36
+msgid "Clear all edited images. New images will be created on page load."
+msgstr ""
+"Alle bearbeiteten Bilder löschen. Neue Bilder werden beim Laden der Seite "
+"erstellt werden."
+
+#: lib/api/image/class-options.php:41
+msgid "Images options"
+msgstr "Bildoptionen"
+
+#: lib/api/image/class-options.php:69
+msgid "Images flushed successfully!"
+msgstr "Bilder wurden erfolgreich gelöscht!"
+
+#: lib/api/image/class-options.php:82
+msgid "Flush images"
+msgstr "Bilder löschen"
+
+#: lib/api/layout/functions.php:276
+#, php-format
+msgid "Use Default Layout (%s)"
+msgstr "Standard Layout  benutzen (%s)"
+
+#: lib/api/layout/functions.php:277
+msgctxt "Default layout"
+msgid "Modify"
+msgstr "Ändern"
+
+#: lib/api/options/class.php:39 lib/api/post-meta/class.php:32
+#: lib/api/wp-customize/class.php:25
+msgid "Undefined"
+msgstr "nicht definiert"
+
+#: lib/api/options/class.php:196
+msgid "Settings saved successfully!"
+msgstr "Einstellungen erfolgreich gespeichert!"
+
+#: lib/api/options/class.php:198
+msgid "Settings could not be saved, please try again."
+msgstr ""
+"Einstellungen konnten nicht gespeichert werden, bitte erneut versuchen."
+
+#: lib/api/options/class.php:210
+msgid "Settings reset successfully!"
+msgstr "Einstellungen erfolgreich zurückgesetzt!"
+
+#: lib/api/options/class.php:212
+msgid "Settings could not be reset, please try again."
+msgstr ""
+"Einstellungen konnten nicht zurückgesetzt werden, bitte erneut versuchen."
+
+#: lib/api/widget/functions.php:57
+msgid "Hello"
+msgstr "Hallo"
+
+#: lib/render/menu.php:23
+msgid "Navigation"
+msgstr "Navigation"
+
+#: lib/render/menu.php:26 lib/templates/fragments/breadcrumb.php:25
+msgid "Home"
+msgstr "Startseite"
+
+#: lib/render/menu.php:46
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+#: lib/render/widget-area.php:19
+msgid "Sidebar Primary"
+msgstr "Sidebar Primär"
+
+#: lib/render/widget-area.php:24
+msgid "Sidebar Secondary"
+msgstr "Sidebar Sekundär"
+
+#: lib/render/widget-area.php:30
+msgid "Off-Canvas Menu"
+msgstr "Off-Canvas Menü"
+
+#: lib/templates/fragments/breadcrumb.php:83
+msgid "Results:"
+msgstr "Ergebnis: "
+
+#: lib/templates/fragments/breadcrumb.php:92
+msgid "Author Archives:"
+msgstr "Autoren Archive:"
+
+#: lib/templates/fragments/breadcrumb.php:99
+msgid "Tag Archives:"
+msgstr "Tag Archive:"
+
+#: lib/templates/fragments/breadcrumb.php:106
+msgid "Archives:"
+msgstr "Archive:"
+
+#: lib/templates/fragments/breadcrumb.php:113
+msgid "404"
+msgstr "404"
+
+#: lib/templates/fragments/comments.php:20
+#, php-format
+msgid "%s Comment"
+msgid_plural "%s Comments"
+msgstr[0] "%s Kommentar"
+msgstr[1] "%s Kommentare"
+
+#: lib/templates/fragments/comments.php:92
+msgid "Trackback"
+msgstr "Trackback"
+
+#: lib/templates/fragments/comments.php:103
+msgid "Pingback"
+msgstr "Pingback"
+
+#: lib/templates/fragments/comments.php:115
+msgid "Awaiting Moderation"
+msgstr "Warten auf Moderation"
+
+#: lib/templates/fragments/comments.php:127
+msgid "Moderator"
+msgstr "Moderator"
+
+#: lib/templates/fragments/comments.php:154
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: lib/templates/fragments/comments.php:211
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: lib/templates/fragments/comments.php:226
+msgid "Link"
+msgstr "Link"
+
+#: lib/templates/fragments/comments.php:248
+msgid "No comment yet, add your voice below!"
+msgstr "Willst du an der Diskussion teilnehmen? "
+
+#: lib/templates/fragments/comments.php:266
+msgid "Comments are closed for this article!"
+msgstr "Kommentare sind für diesen Artikel geschlossen!"
+
+#: lib/templates/fragments/comments.php:301
+#: lib/templates/fragments/post.php:435 lib/templates/fragments/post.php:504
+msgid "Previous"
+msgstr "Ältere Einträge"
+
+#: lib/templates/fragments/comments.php:319
+#: lib/templates/fragments/post.php:446 lib/templates/fragments/post.php:590
+msgid "Next"
+msgstr "Nächste Einträge"
+
+#: lib/templates/fragments/comments.php:361
+msgid "Add a Comment"
+msgstr "Kommentar verfassen"
+
+#: lib/templates/fragments/comments.php:368
+msgid "Post Comment"
+msgstr "Kommentar absenden"
+
+#: lib/templates/fragments/comments.php:435
+msgid "Name"
+msgstr "Name"
+
+#: lib/templates/fragments/comments.php:463
+#, php-format
+msgid "Email %s"
+msgstr "E-Mail %s"
+
+#: lib/templates/fragments/comments.php:492
+msgid "Website"
+msgstr "Webseite"
+
+#: lib/templates/fragments/comments.php:542
+msgid "Comment *"
+msgstr "Kommentar *"
+
+#: lib/templates/fragments/deprecated.php:57
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: lib/templates/fragments/footer.php:24
+#, php-format
+msgid "&#x000A9; %1$s - %2$s. All rights reserved."
+msgstr "&#x000A9; Copyright %1$s - %2$s"
+
+#: lib/templates/fragments/footer.php:45
+#, php-format
+msgid "%1$s theme for WordPress."
+msgstr "%1$s Theme für WordPress"
+
+#: lib/templates/fragments/menu.php:67
+msgid "Menu"
+msgstr "Menü"
+
+#: lib/templates/fragments/menu.php:115
+msgid "Whoops, your site does not have a menu!"
+msgstr "Ups, die Seite besitzt kein Menü!"
+
+#: lib/templates/fragments/post-shortcodes.php:17
+msgid "Posted on "
+msgstr "Verpasst am "
+
+#: lib/templates/fragments/post-shortcodes.php:40
+msgid "By "
+msgstr "Von "
+
+#: lib/templates/fragments/post-shortcodes.php:73
+msgid "Leave a comment"
+msgstr "Kommentar schreiben"
+
+#: lib/templates/fragments/post-shortcodes.php:75
+msgid "1 comment"
+msgstr "1 Kommentar"
+
+#: lib/templates/fragments/post-shortcodes.php:77
+#, php-format
+msgid "%s comments"
+msgstr "%s Kommentare"
+
+#: lib/templates/fragments/post-shortcodes.php:104
+msgid "Tagged with: "
+msgstr "Tags: "
+
+#: lib/templates/fragments/post-shortcodes.php:124
+msgid "Filed under: "
+msgstr "Verfasst in: "
+
+#: lib/templates/fragments/post.php:67
+msgid "Search results for: "
+msgstr "Suchergebnisse für: "
+
+#: lib/templates/fragments/post.php:254
+msgid "Continue reading"
+msgstr "Weiter lesen"
+
+#: lib/templates/fragments/post.php:278
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: lib/templates/fragments/post.php:624
+msgid "Whoops, no result found!"
+msgstr "Ups, nichts gefunden!"
+
+#: lib/templates/fragments/post.php:636
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Es sieht aus als ob an dieser Stelle nichts gefunden wurde. Probiere es "
+"vielleicht mit der Suche!"
+
+#: lib/templates/fragments/post.php:670
+msgid "This post is protected. To view it, enter the password below!"
+msgstr ""
+"Dieser Beitrag ist geschützt. Um ihn anzusehen, bitte das Passwort eingeben!"
+
+#: lib/templates/fragments/post.php:684
+msgid "Password"
+msgstr "Passwort"
+
+#: lib/templates/fragments/post.php:692
+msgid "Submit"
+msgstr "Absenden"
+
+#: lib/templates/fragments/searchform.php:30
+msgid "Search"
+msgstr "Suche"
+
+#: lib/templates/fragments/widget.php:83
+#, php-format
+msgid "%s does not have any widget assigned!"
+msgstr "%s hat keine Widgets zugewiesen!"
+
+#: lib/templates/fragments/widget.php:103
+msgid "Read feed"
+msgstr "Feed lesen"
+
+#. Theme Name of the plugin/theme
+#. Author of the plugin/theme
+msgid "Beans"
+msgstr "Beans"
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://www.getbeans.io"
+msgstr "http://www.getbeans.io"
+
+#. Description of the plugin/theme
+msgid ""
+"The most innovative theme for WordPress. The real magic is under the hood."
+msgstr ""
+"Das innovativste Theme für Wordpress. Die eigentliche Magie passiert unter "
+"der Haube."
