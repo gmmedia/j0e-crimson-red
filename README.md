@@ -4,7 +4,6 @@ Crimson Red is a child-theme for the Beans framework (http://www.getbeans.io/).
 Version 1.0
 
 # Size, color and font
-<<<<<<< HEAD
 Sidebar width: 250px 
 Content width: 705px 
 Image width: 705px 
@@ -15,19 +14,8 @@ Content width - Two Sidebars: 478px
 Text color: #666666 (Satans Gray) 
 Link color: #990000 (Crimson Red) 
 Complementary color: #009999 (Persian Green) 
-=======
-Sidebar width: 250px
-Content width: 705px
-Image width: 705px
-Content width - No Sidebar: 1046px
-Content width - No Sidebar Centred: 800px
-Content width - Two Sidebars: 478px
-Text color: #666666 (Satans Gray)
-Link color: #990000 (Crimson Red)
-Complementary color: #009999 (Persian Green)
->>>>>>> origin/master
 
-Font: "Helvetica Neue", Helvetica, Arial, sans-serif
+Font: "Helvetica Neue", Helvetica, Arial, sans-serif 
 
 ## Preferred Wordpress Media settings
 Thumbnail: 150 x 150 crop 
