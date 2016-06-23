@@ -5,6 +5,7 @@ Version 1.0
 
 # Size, color and font
 Sidebar width: 250px
+
 Content width: 705px
 Image width: 705px
 Content width - No Sidebar: 1046px
