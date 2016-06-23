@@ -1,7 +1,9 @@
 # j0e-crimson-red
-Crimson Red is a child-theme for the Beans framework (http://www.getbeans.io/).
+Crimson Red is a child-theme for the Beans framework (http://www.getbeans.io/).  
+Version 1.0  
 
-Version 1.0
+![Chrimson Red WordPress Theme](screenshot.png "Chrimson Red WordPress Theme")
+
 
 # Size, color and font
 Sidebar width: 250px  
