@@ -440,8 +440,11 @@ function j0e_gallery_defaults( $settings ) {
 add_filter( 'media_view_settings', 'j0e_gallery_defaults' );
 
 
+// Set content_width for images and oembed like Youtube
+if ( ! isset( $content_width ) ) {
+	$content_width = 705;
+}
+
+
 // Includes
 require_once( get_stylesheet_directory() . '/includes/editor-buttons.php' );
-//require_once( get_stylesheet_directory() . '/assets/helpers/cleaner.php' );
-//require_once( get_stylesheet_directory() . '/assets/helpers/testing.php' );
-//require_once( get_stylesheet_directory() . '/assets/helpers/shared.php' );

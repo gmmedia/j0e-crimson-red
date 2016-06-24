@@ -1,6 +1,7 @@
 # j0e-crimson-red ![Chrimson Red Logo](assets/images/logo.png "Chrimson Red Logo")
 Crimson Red is a child-theme for the Beans framework (http://www.getbeans.io/).  
-Version 1.0  
+Version 1.0  = Initial version  
+Version 1.01 = Set $content_width for images and oembeds
 
 # [Chrimson Red WordPress Theme](https://j0e.org/themes/crimson-red/)
 
