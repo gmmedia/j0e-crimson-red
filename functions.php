@@ -9,7 +9,7 @@ remove_theme_support( 'beans-default-styling' );
 
 
 // Enqueue uikit assets
-beans_add_smart_action( 'beans_uikit_enqueue_scripts', 'j0e_enqueue_uikit_assets', 5 );
+add_action( 'beans_uikit_enqueue_scripts', 'j0e_enqueue_uikit_assets', 5 );
 
 function j0e_enqueue_uikit_assets() {
 
@@ -37,11 +37,15 @@ load_child_theme_textdomain( 'tm-beans', get_stylesheet_directory() . '/language
 beans_remove_action( 'beans_site_title_tag' );
 
 
-// Replace h2 and h3 with div
+// Replace h2 and h3 with div - Make the theme semantic valid
 beans_modify_markup( 'beans_widget_title', 'div' );
+
 beans_add_attribute( 'beans_widget_title', 'class', 'uk-h3' );
+
 beans_modify_markup( 'beans_comments_title', 'div' );
+
 beans_add_attribute( 'beans_comments_title', 'class', 'uk-h3' );
+
 add_filter( 'comment_form_defaults', 'example_comment_form_defaults' );
 
 function example_comment_form_defaults( $args ) {
@@ -55,7 +59,7 @@ function example_comment_form_defaults( $args ) {
 
 
 // Modify beans layout (filter)
-beans_add_smart_action( 'beans_layout_grid_settings', 'beans_child_layout_grid_settings' );
+add_action( 'beans_layout_grid_settings', 'beans_child_layout_grid_settings' );
 
 function beans_child_layout_grid_settings( $layouts ) {
 
@@ -90,7 +94,7 @@ function j0e_move_breadcrumb() {
 }
 
 
-// Add a vertical devider between main and sidebar
+// Add a vertical divider between main and sidebar
 beans_add_attribute( 'beans_sidebar_primary', 'class', 'uk-position-relative' );
 
 
@@ -103,7 +107,7 @@ beans_add_attribute( 'beans_footer_credit', 'class', 'uk-link-muted' );
 
 
 // Add admin layout option (filter) (code by Chris - themebutler.com)
-beans_add_smart_action( 'beans_layouts', 'j0e_layouts' );
+add_action( 'beans_layouts', 'j0e_layouts' );
 
 function j0e_layouts( $layouts ) {
 
@@ -139,7 +143,7 @@ function j0e_modify_post_content( $content ) {
 }
 
 
-// Setup document fragements, markups and attributes
+// Setup document fragments, markups and attributes
 add_action( 'wp', 'j0e_setup_document' );
 
 function j0e_setup_document() {
@@ -158,7 +162,7 @@ function j0e_setup_document() {
 	if ( beans_get_layout() == 'j0e_c' )
 		beans_add_attribute( 'beans_content', 'class', 'tm-centered-content' );
 
-	// Post title
+	// Post and archive title
 	beans_add_attribute( 'beans_post_title', 'class', 'uk-margin-small-bottom' );
 	beans_remove_attribute( 'beans_post_title', 'class', 'uk-article-title' );
 	beans_remove_attribute( 'beans_archive_title', 'class', 'uk-article-title' );
@@ -176,34 +180,25 @@ function j0e_setup_document() {
 }
 
 
-// Add primaray menu search field (code by Chris - themebutler.com)
-beans_add_smart_action( 'beans_primary_menu_append_markup', 'j0e_primary_menu_search' );
+// Add primary menu search field (code by Chris - themebutler.com)
+add_action( 'beans_primary_menu_append_markup', 'j0e_primary_menu_search' );
 
 function j0e_primary_menu_search() {
 
-	echo beans_open_markup( 'j0e_menu_primary_search', 'div', array(
-		'class' => 'tm-search uk-visible-large uk-navbar-content',
-		'style' => 'display: none;'
-	) );
-
+	?><div class="tm-search uk-visible-large uk-navbar-content" style="display: none;"><?php
 		get_search_form();
+	?></div><?php
 
-	echo beans_close_markup( 'j0e_menu_primary_search', 'div' );
-
-	echo beans_open_markup( 'j0e_menu_primary_search_toggle', 'div', array(
-		'class' => 'tm-search-toggle uk-visible-large uk-navbar-content uk-display-inline-block'
-	) );
-
-		echo beans_open_markup( 'j0e_menu_primary_search_icon', 'i', array( 'class' => 'uk-icon-search' ) );
-		echo beans_close_markup( 'j0e_menu_primary_search_icon', 'i' );
-
-	echo beans_close_markup( 'j0e_menu_primary_search_toggle', 'div' );
+	?><div class="tm-search-toggle uk-visible-large uk-navbar-content uk-display-inline-block">
+		<i class="uk-icon-search"></i>
+	</div>
+	<?php
 
 }
 
 
 // Remove comment after note (filter)
-beans_add_smart_action( 'comment_form_defaults', 'j0e_comment_form_defaults' );
+add_action( 'comment_form_defaults', 'j0e_comment_form_defaults' );
 
 function j0e_comment_form_defaults( $args ) {
 
@@ -215,7 +210,7 @@ function j0e_comment_form_defaults( $args ) {
 
 
 // Register bottom widget area
-beans_add_smart_action( 'widgets_init', 'j0e_register_bottom_widget_area' );
+add_action( 'widgets_init', 'j0e_register_bottom_widget_area' );
 
 function j0e_register_bottom_widget_area() {
 
@@ -230,7 +225,7 @@ function j0e_register_bottom_widget_area() {
 
 
 // Add the bottom widget area
-beans_add_smart_action( 'beans_footer_before_markup', 'j0e_bottom_widget_area' );
+add_action( 'beans_footer_before_markup', 'j0e_bottom_widget_area' );
 
 function j0e_bottom_widget_area() {
 
@@ -238,21 +233,17 @@ function j0e_bottom_widget_area() {
 	if( !beans_is_active_widget_area( 'bottom' ) )
 		return;
 
-	echo beans_open_markup( 'j0e_bottom', 'section', array( 'class' => 'tm-bottom uk-block' ) );
-
-		echo beans_open_markup( 'beans_fixed_wrap[_bottom]', 'div', 'class=uk-container uk-container-center' );
-
-			echo beans_widget_area( 'bottom' );
-
-		echo beans_close_markup( 'beans_fixed_wrap[_bottom]', 'div' );
-
-	echo beans_close_markup( 'j0e_bottom', 'section' );
+	?><section class="tm-bottom uk-block">
+		<div class="uk-container uk-container-center">
+			<?php echo beans_widget_area( 'bottom' ); ?>
+		</div>
+	</section><?php
 
 }
 
 
 // Register hero widget area
-beans_add_smart_action( 'widgets_init', 'j0e_register_hero_widget_area' );
+add_action( 'widgets_init', 'j0e_register_hero_widget_area' );
 
 function j0e_register_hero_widget_area() {
 
@@ -267,7 +258,7 @@ function j0e_register_hero_widget_area() {
 
 
 // Add the hero area
-beans_add_smart_action( 'beans_main_grid_before_markup', 'j0e_hero_widget_area' );
+add_action( 'beans_main_grid_before_markup', 'j0e_hero_widget_area' );
 
 function j0e_hero_widget_area() {
 
@@ -275,80 +266,71 @@ function j0e_hero_widget_area() {
 	if( !beans_is_active_widget_area( 'hero' ) )
 		return;
 
-	echo beans_open_markup( 'j0e_hero', 'section', array( 'class' => 'uk-block' ) );
-
-		echo beans_open_markup( 'beans_fixed_wrap[_hero]', 'div', 'class=uk-container uk-container-center j0e-hero-section' );
-
-			echo beans_widget_area( 'hero' );
-
-		echo beans_close_markup( 'beans_fixed_wrap[_hero]', 'div' );
-
-	echo beans_close_markup( 'j0e_hero', 'section' );
+	?><section class="uk-block">
+		<div class="class=uk-container uk-container-center j0e-hero-section">
+			<?php echo beans_widget_area( 'hero' ); ?>
+		</div>
+	</section><?php
 
 }
 
 
 // Add post meta item date icon
-beans_add_smart_action( 'beans_post_meta_item_date_prepend_markup', 'jenkins_post_meta_item_date_icon' );
+add_action( 'beans_post_meta_item_date_prepend_markup', 'j0e_post_meta_item_date_icon' );
 
-function jenkins_post_meta_item_date_icon() {
+function j0e_post_meta_item_date_icon() {
 
-	echo beans_open_markup( 'jenkins_post_meta_item_date_icon', 'i', 'class=uk-icon-clock-o uk-margin-small-right uk-text-muted' );
-	echo beans_close_markup( 'jenkins_post_meta_item_date_icon', 'i' );
+	?><i class="uk-icon-clock-o uk-margin-small-right uk-text-muted"></i><?php
 
 }
 
 
 // Add post meta item author icon
-beans_add_smart_action( 'beans_post_meta_item_author_prepend_markup', 'jenkins_post_meta_item_author_icon' );
+add_action( 'beans_post_meta_item_author_prepend_markup', 'j0e_post_meta_item_author_icon' );
 
-function jenkins_post_meta_item_author_icon() {
+function j0e_post_meta_item_author_icon() {
 
-	echo beans_open_markup( 'jenkins_post_meta_item_author_icon', 'i', 'class=uk-icon-user uk-margin-small-right uk-text-muted' );
-	echo beans_close_markup( 'jenkins_post_meta_item_author_icon', 'i' );
+	?><i class="uk-icon-user uk-margin-small-right uk-text-muted"></i><?php
 
 }
 
 
 // Add post meta item categories icon
-beans_add_smart_action( 'beans_post_meta_categories_prepend_markup', 'jenkins_post_meta_item_categories_icon' );
+add_action( 'beans_post_meta_categories_prepend_markup', 'j0e_post_meta_item_categories_icon' );
 
-function jenkins_post_meta_item_categories_icon() {
+function j0e_post_meta_item_categories_icon() {
 
-	echo beans_open_markup( 'jenkins_post_meta_item_categories_icon', 'i', 'class=uk-icon-archive uk-margin-small-right uk-text-muted' );
-	echo beans_close_markup( 'jenkins_post_meta_item_categories_icon', 'i' );
+	?><i class="class=uk-icon-archive uk-margin-small-right uk-text-muted"></i><?php
 
 }
 
 
 // Add post meta item tags icon
-beans_add_smart_action( 'beans_post_meta_tags_prepend_markup', 'jenkins_post_meta_item_tags_icon' );
+add_action( 'beans_post_meta_tags_prepend_markup', 'j0e_post_meta_item_tags_icon' );
 
-function jenkins_post_meta_item_tags_icon() {
+function j0e_post_meta_item_tags_icon() {
 
-	echo beans_open_markup( 'jenkins_post_meta_item_tags_icon', 'i', 'class=uk-icon-tags uk-margin-small-right uk-text-muted' );
-	echo beans_close_markup( 'jenkins_post_meta_item_tags_icon', 'i' );
+	?><i class="uk-icon-tags uk-margin-small-right uk-text-muted"></i><?php
 
 }
 
 
 // Add post meta item comment icon
-beans_add_smart_action( 'beans_post_meta_item_comments_prepend_markup', 'jenkins_post_meta_item_comments_icon' );
+add_action( 'beans_post_meta_item_comments_prepend_markup', 'j0e_post_meta_item_comments_icon' );
 
-function jenkins_post_meta_item_comments_icon() {
+function j0e_post_meta_item_comments_icon() {
 
-	echo beans_open_markup( 'jenkins_post_meta_item_comments_icon', 'i', 'class=uk-icon-comments uk-margin-small-right uk-text-muted' );
-	echo beans_close_markup( 'jenkins_post_meta_item_comments_icon', 'i' );
+	?><i class="uk-icon-comments uk-margin-small-right uk-text-muted"></i><?php
 
 }
 
 
 // Add the new secondary menu
-beans_add_smart_action( 'beans_header_after_markup', 'j0e_secondary_menu' );
+add_action( 'beans_header_after_markup', 'j0e_secondary_menu' );
 
 function j0e_secondary_menu() {
 	if ( has_nav_menu( 'secondary-menu' ) ) {
-		echo beans_open_markup( 'j0e_secondary_menu_nav', 'div', 'class=j0e-secondary-menu' );
+		?><div class="j0e-secondary-menu"><?php
 		wp_nav_menu( array( 
 			'menu' => 'Secondary Menu',
 			'menu_class' => 'uk-navbar-nav uk-visible-larget',
@@ -357,7 +339,7 @@ function j0e_secondary_menu() {
 			'theme_location' => 'secondary-menu',
 			'beans_type' => 'navbar'
 		) );
-		echo beans_close_markup( 'j0e_secondary_menu_nav', 'div' );
+		?></div><?php
 	}
 }
 
@@ -379,11 +361,11 @@ function j0e_register_my_social_menu() {
 
 
 // Add the new Top Social Menu
-beans_add_smart_action( 'beans_header_before_markup', 'j0e_social_menu' );
+add_action( 'beans_header_before_markup', 'j0e_social_menu' );
 
 function j0e_social_menu() {
 	if ( has_nav_menu( 'social-menu' ) ) {
-		echo beans_open_markup( 'j0e_social_bar-container', 'div', array( 'class' => 'j0e-social-bar' ) );
+		?><div class="j0e-social-bar"><?php
 		wp_nav_menu( array( 
 		    'menu' => 'Social Menu',
 		    'menu_class' => 'uk-subnav uk-navbar-flip',
@@ -392,13 +374,13 @@ function j0e_social_menu() {
 		    'theme_location' => 'social-menu',
 		    'beans_type' => 'navbar'
 		) );
-		echo beans_close_markup( 'j0e_social_bar-container', 'div' );
+		?></div"><?php
 	}
 }
 beans_remove_attribute( 'beans_menu[_navbar][_social-menu]', 'class', 'uk-navbar-nav' );
 
 
-// Register new Secondary Menu
+// Register new secondary menu
 add_action( 'init', 'j0e_register_my_secondary_menu' );
 
 function j0e_register_my_secondary_menu() {
@@ -407,7 +389,7 @@ function j0e_register_my_secondary_menu() {
 
 
 // Overwrite the footer credit and add the footer menu for contact, privacy...
-beans_add_smart_action( 'beans_footer_credit_right_text_output', 'j0e_footer_menu' );
+add_action( 'beans_footer_credit_right_text_output', 'j0e_footer_menu' );
 
 function j0e_footer_menu() {
 	if ( has_nav_menu( 'footer-menu' ) ) {

@@ -1,9 +1,9 @@
 <?php
 
 // Modify the 404 page markup
-beans_add_smart_action( 'beans_before_load_document', 'banks_404_setup_document' );
+add_action( 'beans_before_load_document', 'j0e_404_setup_document' );
 
-function banks_404_setup_document() {
+function j0e_404_setup_document() {
 
     // Post
     beans_remove_attribute( 'beans_no_post_article_content', 'class', 'uk-alert uk-alert-warning' );
@@ -14,21 +14,21 @@ function banks_404_setup_document() {
 
 
 // Update the 404 page title
-beans_add_smart_action( 'beans_no_post_article_title_text_output', 'banks_404_post_title' );
+add_action( 'beans_no_post_article_title_text_output', 'j0e_404_post_title' );
 
-function banks_404_post_title() {
+function j0e_404_post_title() {
 
-	return beans_output( 'banks_no_post_article_title_text', __( '404', 'tbr-banks' ) );
+	return beans_output( 'j0e_no_post_article_title_text', __( '404', 'tm-beans' ) );
 
 }
 
 
 // Update the 404 page content
-beans_add_smart_action( 'beans_no_post_article_content_text_output', 'banks_404_post_content' );
+add_action( 'beans_no_post_article_content_text_output', 'j0e_404_post_content' );
 
-function banks_404_post_content() {
+function j0e_404_post_content() {
 
-	return beans_output( 'banks_no_post_article_content_text', __( 'Page not found', 'tbr-banks' ) );
+	return beans_output( 'j0e_no_post_article_content_text', __( 'Page not found', 'tm-beans' ) );
 
 }
 

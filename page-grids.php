@@ -4,7 +4,7 @@
 
 
 // Setup j0e
-beans_add_smart_action( 'beans_before_load_document', 'j0e_index_setup_document' );
+add_action( 'beans_before_load_document', 'j0e_index_setup_document' );
 
 function j0e_index_setup_document() {
 
@@ -45,7 +45,7 @@ function j0e_index_setup_document() {
 
 
 // Resize post image (filter)
-beans_add_smart_action( 'beans_edit_post_image_args', 'j0e_index_post_image_args' );
+add_action( 'beans_edit_post_image_args', 'j0e_index_post_image_args' );
 
 function j0e_index_post_image_args( $args ) {
 
@@ -56,19 +56,18 @@ function j0e_index_post_image_args( $args ) {
 }
 
 
-add_filter( 'beans_loop_query_args', 'beans_child_view_query_args' );
+add_filter( 'beans_loop_query_args', 'j0e_child_view_query_args' );
 
-function beans_child_view_query_args() {
+function j0e_child_view_query_args() {
 
     return array(
 		'post_type' => 'post',
-        //'category_name' => 'your-cat-slug',
         'paged' => get_query_var( 'paged' )
     );
 
 }
 
-// Trim the content.
+// Trim the content
 add_filter( 'the_content', 'example_post_excerpt' );
 
 function example_post_excerpt( $content ) {

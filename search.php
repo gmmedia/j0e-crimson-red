@@ -1,7 +1,7 @@
 <?php
 
 // Modify the search page markup
-beans_add_smart_action( 'beans_before_load_document', 'j0e_search_setup_document' );
+add_action( 'beans_before_load_document', 'j0e_search_setup_document' );
 
 function j0e_search_setup_document() {
 
@@ -24,31 +24,27 @@ function j0e_search_setup_document() {
 
 
 // Add the search form
-beans_add_smart_action( 'beans_search_title_after_markup', 'j0e_search_field' );
+add_action( 'beans_search_title_after_markup', 'j0e_search_field' );
 
 function j0e_search_field( $content ) {
 
-	echo beans_open_markup( 'j0e_search_content', 'div', array( 'class' => 'uk-grid-margin' ) );
-
-    	get_search_form();
-
-   	echo beans_close_markup( 'j0e_search_content', 'div' );
+    ?><div class="uk-grid-margin"><?php
+        get_search_form();
+    ?></div><?php
 
 }
 
 
 // Clean up the search results item markup
-beans_add_smart_action( 'the_content', 'j0e_search_content' );
+add_action( 'the_content', 'j0e_search_content' );
 
 function j0e_search_content( $content ) {
 
-    $output = beans_open_markup( 'j0e_search_content', 'p' );
+    $output = "<p>";
+        $output .= beans_output( 'j0e_search_post_content', substr( strip_tags( $content ), 0, 150 ) . ' ...' );
+    $output .= "</p>";
 
-    	$output .= beans_output( 'j0e_search_post_content', substr( strip_tags( $content ), 0, 150 ) . ' ...' );
-
-   	$output .= beans_close_markup( 'j0e_search_content', 'p' );
-
-   	return $output;
+    return $output;
 
 }
 

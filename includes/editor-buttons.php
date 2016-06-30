@@ -1,4 +1,5 @@
 <?php
+
 // Add more buttons to the html editor
 function j0e_add_quicktags() {
     if (wp_script_is('quicktags')){
@@ -28,4 +29,5 @@ function j0e_add_quicktags() {
 <?php
     }
 }
+
 add_action( 'admin_print_footer_scripts', 'j0e_add_quicktags' );
