@@ -80,7 +80,7 @@ function j0e_move_breadcrumb() {
         <div class="uk-container uk-container-center">
             <?php echo beans_breadcrumb();
 			// Only apply to home page.
-			if ( is_home() ) {
+			if ( is_home() || is_front_page() ) {
 				?>
 				<a href="/" rel="home" title="<?php echo get_option( 'blogdescription' ) ?>">
 					<h1 class="j0e-h1-small"><?php echo get_option( 'blogname' ) ?></h1>
