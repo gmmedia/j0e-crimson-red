@@ -428,5 +428,16 @@ if ( ! isset( $content_width ) ) {
 }
 
 
+// Add back to top link
+add_action( 'beans_body_after_markup', 'j0e_back_to_top' );
+function j0e_back_to_top() {
+	?>
+	<a href="#top" title="Scroll to top" data-uk-sticky="{top:-200}" class="back-to-top uk-button">
+		<i class="uk-icon-arrow-up"></i>
+	</a>
+	<?php
+}
+
+
 // Includes
 require_once( get_stylesheet_directory() . '/includes/editor-buttons.php' );

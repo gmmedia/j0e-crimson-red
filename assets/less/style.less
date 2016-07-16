@@ -315,3 +315,22 @@ a[target="_blank"]:after {
 	max-width: 100%;
 	height: auto;
 }
+
+
+/* Back to top link
+ ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+}
+
+
+/* Balancing the fixed header height for named anchors
+ ========================================================================== */
+:target:before {
+content: "";
+display: block;
+height: 90px; /* same as your fixed header height */
+margin: -90px 0 0; /* negative fixed header height */
+}
