@@ -300,7 +300,7 @@ add_action( 'beans_post_meta_categories_prepend_markup', 'j0e_post_meta_item_cat
 
 function j0e_post_meta_item_categories_icon() {
 
-	?><i class="class=uk-icon-archive uk-margin-small-right uk-text-muted"></i><?php
+	?><i class="uk-icon-archive uk-margin-small-right uk-text-muted"></i><?php
 
 }
 

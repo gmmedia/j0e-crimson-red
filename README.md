@@ -1,6 +1,7 @@
 # j0e-crimson-red ![Chrimson Red Logo](assets/images/logo.png "Chrimson Red Logo")
 Crimson Red is a child-theme for the Beans framework (http://www.getbeans.io/). 
 
+* Version 1.05 = Fixed archive icon
 * Version 1.04 = Add back to top link, balancing the fixed header height
 * Version 1.03 = Fixed breadcrumb on front page
 * Version 1.02 = Code cleanups
